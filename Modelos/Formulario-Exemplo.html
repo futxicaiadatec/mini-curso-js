@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+        <title>Aula 4 - Exercício JS</title>
+		<script>
+	
+			//console.log("Hello PAW I");
+			function mostrarEsconderSenha(id) {
+			
+			
+				var elem_type = document.getElementById(id).type;
+				if (elem_type=="password") {
+					document.getElementById(id).type="text";
+				}
+				else {
+					document.getElementById(id).type="password";
+				}
+				
+			}
+			
+		</script>
+		<style>
+		
+			body {
+				font-family: verdana;
+				font-size: 13px;
+			}
+		
+			fieldset {
+				border: 1px solid #CCC;
+				border-radius: 4px;
+			}
+			
+			fieldset > legend {
+				font-weight: bold;
+				font-style: italic;
+				font-size: 15px;
+			}
+			
+			br.block {
+				display: block;
+				margin-top: 6px;
+				margin-bottom: 6px;
+			}
+			
+			input {
+				border: 1px solid #666;
+				border-radius: 4px;
+				height: 25px;
+			}
+			
+			label {
+				display: inline-block;
+			}
+			
+			label[for="nome"] {
+				margin-right: 75px;
+			}
+			
+			label[for="rga"] {
+				margin-right: 85px;
+			}
+			
+			label[for="senha"] {
+				margin-right: 72px;
+			}				
+			
+			label[for="confirma-senha"] {
+				margin-right: 11px;
+			}
+
+			img.icon {
+				cursor: pointer;
+			}
+			
+			span.msg-error {
+				color: #bf0404;
+				font-size: 11px;
+				display: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>Formulário de Cadastro</legend>
+			<label for="nome">Nome:</label>
+			<input type="text" name="nome" id="nome" placeholder="Digite seu nome" size="56" />
+			<br class="block" />
+			<label for="rga">RGA:</label>
+			<input type="text" name="rga" id="rga" placeholder="Digite seu RGA"  size="45" />
+			<br class="block" />
+			<label for="senha">Senha:</label>
+			<input type="password" name="senha" id="senha" placeholder="Digite sua senha de acesso" size="30" />
+			<img class="icon" src="icon-eye-20x20.png" data-role="senha" alt="eye" title="click para mostrar / esconder a senha" onclick="mostrarEsconderSenha('senha')" />
+			<br />
+			<span class="msg-error">A senha tem que ter pelo menos 6 digitos</span>
+			<label for="confirma-senha">Confirme a senha:</label>
+			<br class="block" />
+			<input type="password" name="confirma-senha" id="confirma-senha" placeholder="Confirme a senha" size="30" />
+			<img class="icon" src="icon-eye-20x20.png" data-role="confirma-senha" alt="eye" title="click para mostrar / esconder a senha" onclick="mostrarEsconderSenha('confirma-senha')" />
+			<br />
+			<span class="msg-error">Deve conferir com a senha digitada</span>
+			<br class="block" />			
+		</fieldset>
+	</body>
+</html>
