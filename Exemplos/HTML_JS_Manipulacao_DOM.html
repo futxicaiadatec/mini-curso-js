@@ -56,6 +56,12 @@
 			min="1" max="30" step="1" value="1" />
 		<hr />
 		<button onclick="mudarCor()">Mudar Cor</button>
+		
+		<script>
+			var elem_paragrafo = document.getElementById("par");
+			console.log(window.getComputedStyle(elem_paragrafo,null).getPropertyValue("font-size"));
+		</script>
+		
 	</body>
 </html>
 
