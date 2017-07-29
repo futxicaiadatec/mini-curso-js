@@ -20,16 +20,25 @@
 			elem.style.backgroundColor 
 				= "rgb("+r+","+g+","+b+")";
 		}
+		
+		function pegarTexto() {
+			var elem;
+			elem = document.getElementById("texto");
+			if (elem != null) {
+				alert("Você digitou: "+elem.value);
+			}
+		}
+		
 	</script>
 </head>
 	<body>
 		<p id="par">
 			Lorem Ipsum
 		</p>
-		<button onclick="mudarCor();">Mudar Cor</button>
-		
-		
-		
+		Digite um texto: 
+		<input value="" id="texto" type="text" />
+		<br />
+		<button onclick="mudarCor();pegarTexto();">Mudar Cor</button>
 		<script>
 		</script>
 	</body>
