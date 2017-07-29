@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+	<script>
+	
+		function getRandomIntInclusive(min, max) {
+		  min = Math.ceil(min);
+		  max = Math.floor(max);
+		  return Math.floor(Math.random() * (max - min + 1)) + min;
+		}	
+	
+		function mudarCor() {
+			var elem;
+			var r = getRandomIntInclusive(0,255);
+			var g = getRandomIntInclusive(0,255);
+			var b = getRandomIntInclusive(0,255);
+			elem = document.getElementById("par");
+			elem.style.backgroundColor 
+				= "rgb("+r+","+g+","+b+")";
+		}
+	</script>
+</head>
+	<body>
+		<p id="par">
+			Lorem Ipsum
+		</p>
+		<button onclick="mudarCor();">Mudar Cor</button>
+		
+		
+		
+		<script>
+		</script>
+	</body>
+</html>
