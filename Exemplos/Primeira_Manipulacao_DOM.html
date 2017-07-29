@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <title>$Title$</title>
 	<script>
-	
+		
+		document.addEventListener('DOMContentLoaded',
+			function () {
+				var elem_par;
+				elem_par = document.getElementById("par");
+				elem_par.style.border = "1px solid #000";			
+			}
+		);
+		
 		function getRandomIntInclusive(min, max) {
 		  min = Math.ceil(min);
 		  max = Math.floor(max);
@@ -16,9 +24,13 @@
 			var r = getRandomIntInclusive(0,255);
 			var g = getRandomIntInclusive(0,255);
 			var b = getRandomIntInclusive(0,255);
+			
+			
 			elem = document.getElementById("par");
 			elem.style.backgroundColor 
 				= "rgb("+r+","+g+","+b+")";
+				
+			localStorage.setItem("corEscolhida","rgb("+r+","+g+","+b+")");
 		}
 		
 		function pegarTexto() {
@@ -40,6 +52,15 @@
 		<br />
 		<button onclick="mudarCor();pegarTexto();">Mudar Cor</button>
 		<script>
+			/*var elem_par;
+			elem_par = document.getElementById("par");
+			
+			elem_par.addEventListener(
+				"click",function() {
+					
+				});
+			
+			elem_par.style.border = "1px solid #000";		*/
 		</script>
 	</body>
 </html>
