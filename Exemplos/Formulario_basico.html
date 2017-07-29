@@ -14,12 +14,17 @@
 				font-weight: bold;
 			}
 		
-			input {
+			input[type="text"], input[type="password"] {
 				border: 1px solid #006600;
 				border-radius: 4px;
 				box-shadow: 2px 2px 3px #000,
 							inset 2px 2px 8px #CCC;
+			}		
+			
+			.senha {
+				background-color: #42e2f4;
 			}
+			
 		</style>
 	</head>
 	<body>
@@ -33,7 +38,7 @@
 				<input type="text" id="txt-nome-completo" name="txt-nome-completo" />
 				<br />
 				<label for="psswd-senha-aluno">Senha</label>
-				<input type="password" id="psswd-senha-aluno" name="psswd-senha-aluno" />
+				<input class="senha" type="password" id="psswd-senha-aluno" name="psswd-senha-aluno" />
 				<br />
 				<span>Curso:</span>
 				<br />
