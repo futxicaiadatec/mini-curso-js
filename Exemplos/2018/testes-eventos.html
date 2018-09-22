@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira Manipulação DOM</title>
+	<script>
+		//addEventListener
+	document.addEventListener('DOMContentLoaded',
+		function() {
+			var elem = document.getElementById('paragrafo');
+			elem.style.color="#0e6d14";
+			elem.style.fontSize="26px";
+			elem.addEventListener("click",
+				function() {
+					alert("fui clicado!");
+				}
+			);			
+		}
+	);	
+
+	</script>
+</head>
+	<body>
+		<p id="paragrafo">
+			Lorem Ipsum
+		</p>
+		<button>Mudar Estilo</button>
+		
+		<script>
+		
+	//pra funcionar tem que ser chamado após o parágrafo ser renderizado
+	//debugger;
+	/*var elem = document.getElementById('paragrafo');
+	elem.style.color="#0e6d14";
+
+	elem.style.fontSize="26px";*/
+	
+/*var elem = document.getElementById('paragrafo');
+
+elem.addEventListener("click",
+	function() {
+		alert("fui clicado!");
+		//console.log("clicado");
+	}
+);*/	
+			
+		</script>		
+		
+	</body>
+</html>

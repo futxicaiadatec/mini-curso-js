@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira Manipulação DOM</title>
+	<script>
+	
+		function mudarEstilos() {
+var elem = document.getElementById('paragrafo');
+elem.style.color="#0e6d14";
+elem.style.fontSize="26px";
+		}
+		
+		function mudarEstilos2() {
+var elem = document.getElementById('paragrafo');
+elem.style.backgroundColor="#9e42f4";
+elem.style.fontSize="13px;";			
+		}
+		
+	</script>
+</head>
+	<body>
+		<p id="paragrafo" onmouseover="mudarEstilos2();">
+			Lorem Ipsum
+		</p>
+		<button onclick="mudarEstilos();">Mudar Estilo</button>
+	</body>
+</html>
