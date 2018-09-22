@@ -1,1 +1,1 @@
-Material do mini-curso de JavaScript, jQuery e BootStrap
+Material do mini-curso de Introdução à Linguagem JavaScript
