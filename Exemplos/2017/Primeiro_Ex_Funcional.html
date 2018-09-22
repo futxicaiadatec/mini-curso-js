@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+	<script>
+	
+		var soma = function(a) {
+			return function(b) {
+				return a+b;
+			}
+		}
+		
+		function soma_f(a,b) {
+			return a+b;
+		}
+		
+		console.log(soma(10)(5));
+		console.log(soma(30)(15));
+		console.log(soma(100)(8));
+		
+		var soma_func = a => b => a+b;
+		
+		console.log(soma_func(10)(5));
+		console.log(soma_func(30)(15));
+		console.log(soma_func(100)(8));		
+		
+	</script>
+</head>
+	<body>
+		<script>
+		</script>
+	</body>
+</html>

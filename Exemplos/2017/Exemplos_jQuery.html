@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+	<script src="js/jquery-3.2.1.js">
+	</script>
+	
+	<script>
+		$(document).ready(
+			function() {
+				//alert("Alert jQuery");
+				$("#par").on("click",
+					function() {
+						//alert("Fui clicado! =(");
+						
+						var cor_borda = $("#cor-borda").val();
+						var cor_fundo = $("#cor-fundo").val();
+						
+						$(this).css(
+						{ "background-color" : cor_fundo,
+						  "border-color"     : cor_borda }
+						);
+						
+					}
+				);
+			}
+		);
+		
+		function mostrarEsconder() {
+			//document.getElementById("bloco").style.display = "none";
+			$("#bloco").fadeToggle(600)
+				.slideToggle(400).toggle(300);
+		}
+		
+	</script>
+	
+	
+</head>
+	<body>
+		<div id="bloco">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel urna nulla. Aenean ut dui sem. Donec pharetra orci non mattis maximus. Morbi semper dui feugiat fermentum convallis. In magna ligula, suscipit vel sapien at, varius blandit arcu. Vivamus eu lacus eget mauris consequat congue. Curabitur placerat, tortor vitae facilisis sagittis, lacus nulla sollicitudin est, vitae ornare tellus nisi at lacus. Duis dolor est, eleifend faucibus convallis a, convallis vitae risus. Curabitur scelerisque rhoncus tincidunt. Cras lorem urna, posuere id viverra a, finibus vitae diam. Proin scelerisque lacus ac ligula pellentesque pellentesque. Nam euismod mollis urna eget malesuada. Nulla facilisi. Donec id viverra ante. Etiam pretium porta ante, eget porta risus hendrerit vitae. Nulla id urna vel ipsum accumsan pulvinar. 		
+		</div>
+		
+		<p id="par" style="border: 1px solid #000; font-size: 13px; cursor: pointer;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies sit amet massa at feugiat. Quisque gravida, lectus non finibus tempor, velit arcu fringilla augue, nec blandit urna lectus et risus. Sed sodales, sem sed interdum iaculis, nulla risus consequat quam, malesuada congue est metus id tellus.
+		</p>
+		<hr />
+		Selecione a cor da borda:&nbsp;<input id="cor-borda" type="color" />
+		<br />
+		Selecione a cor do fundo:&nbsp;<input id="cor-fundo" type="color" />		
+		<hr />
+		<button onClick="mostrarEsconder()">Mostrar / Esconder</button>
+		<script>
+		</script>
+	</body>
+</html>
