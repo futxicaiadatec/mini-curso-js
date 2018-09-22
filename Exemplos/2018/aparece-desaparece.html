@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira Manipulação DOM</title>
+	<script>
+		//addEventListener
+	document.addEventListener('DOMContentLoaded',
+		function() {
+			var elem = document.getElementById('paragrafo');
+			elem.style.color="#0e6d14";
+			//elem.style.fontSize="26px";
+			elem.addEventListener("click",
+				function() {
+					alert("fui clicado!");
+				}
+			);			
+		}
+	);	
+	
+	function apareceDesaparece() {
+		var elem = document.getElementById('paragrafo');
+		console.log(elem.style.color);
+		console.log(elem.style.fontSize);
+		console.log(elem.style.display);
+		
+var estilos = window.getComputedStyle(elem);
+console.log(estilos.getPropertyValue('font-size'));
+console.log(estilos.getPropertyValue('display'));
+
+var displayAtual = estilos.getPropertyValue('display');
+if (displayAtual=='block') {
+	elem.style.display='none';
+}
+else {
+	elem.style.display='block';
+}
+		
+		
+		
+	}
+
+	</script>
+</head>
+	<body>
+		<p id="paragrafo">
+			Lorem Ipsum
+		</p>
+		<button onclick="apareceDesaparece();">Mudar Estilo</button>		
+		
+	</body>
+</html>
